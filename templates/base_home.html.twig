@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+  .actions-header {
+    text-align: center;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .animal-heading {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 80.5px;
+    text-align: left; /* Updated property */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0.5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button4 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .button1 {
+    background-color: white;
+    color: black;
+    width:25%;
+    border: 0.5px solid #4CAF50;
+  }
+
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .button2 {
+    background-color: white;
+    color: black;
+    width:25%;
+    border: 0.5px solid #008CBA;
+  }
+
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  .button3 {
+    background-color: white;
+    color: black;
+    width:25%;
+    border: 0.5px solid #f44336;
+  }
+
+  .button3:hover {
+    background-color: #f44336;
+    color: white;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %}{% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{asset('assets/images/logo-myvet.png')}}" rel="icon">
+
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{{asset('assets_front/vendor/bootstrap/css/bootstrap.min.css')}}"
+   rel="stylesheet">
+  <link href="{{asset('assets_front/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{asset('assets_front/css/style.css')}}" rel="stylesheet">
+   {% block stylesheet %}
+    
+   {% endblock %}
+  
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">web-wizards@gmail.com</a>
+        <i class="bi bi-phone">+216 55682727</i> 
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      
+      <a href="#" class="logo me-auto"><img src="{{asset('assets/images/logo-myvet.png')}}" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">accueil</a></li>
+          <li><a class="nav-link scrollto" href="#about">a propos</a></li>
+          <li><a class="nav-link scrollto" href="#about">publications</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+       <a href="{{path('app_login')}}" class="logout-btn scrollto"><span class="d-none d-md-inline"></span>connecter/inscription</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  
+    {% block body %}
+        
+    {% endblock %}
+  
+
+  <!-- Template Main JS File -->
+  <script src="{{asset('assets_front/js/main.js')}}"></script>
+   {% block javascript %}
+    
+   {% endblock %}
+</body>
+
+</html>
